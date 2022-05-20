@@ -1,4 +1,8 @@
 <?php
+require_once("./modules/sessionController.php");
+
+$alert =  checkSession();
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +26,7 @@
                 <img class="image" src="./assets/images/login.png" alt="Login" width="100" height="100">
                 <h1 class="card-title text-center">LOGIN</h1>
                 <article class="card-text">
-                    <form action="">
+                    <form action="./modules/login.php" method="POST">
                         <div class="form-group">
                             <label for="email">Email Address</label>
                             <input class="form-control form-control-sm" id="email" name="email" type="email">
@@ -36,7 +40,8 @@
                         </div>
                     </form>
                 </article>
-            <!-- alert message -->
+                <!-- alert message -->
+                <?= ($alert) ? "<div class='alert alert-$alert[type] role='alert'>$alert[message]</div>" : "" ?>
             </section>
         </main>
     </div>

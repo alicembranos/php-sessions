@@ -26,8 +26,8 @@ body {
   width: 100%;
 }
 
-.card-text{
-    width: 80%;
+.card-text {
+  width: 80%;
 }
 
 form {
@@ -75,6 +75,14 @@ input[type="password"]:focus {
   /* transform: translateY(10px); */
 }
 
-.btn:hover{
-    opacity: 0.5;
+.btn:hover {
+  opacity: 0.5;
+}
+
+.form-control {
+  color: aliceblue;
+}
+
+.form-control:focus {
+  color: aliceblue;
 }
